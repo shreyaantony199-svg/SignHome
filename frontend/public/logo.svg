@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="sh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="60%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+    <style>
+      @keyframes wave {
+        0%   { transform: rotate(0deg); }
+        20%  { transform: rotate(-8deg); }
+        40%  { transform: rotate(6deg); }
+        60%  { transform: rotate(-4deg); }
+        80%  { transform: rotate(3deg); }
+        100% { transform: rotate(0deg); }
+      }
+      @keyframes fingerwave {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.92); }
+      }
+      .sh-hand-group {
+        transform-origin: 50px 72px;
+        animation: wave 4s ease-in-out infinite;
+      }
+      .sh-finger-index  { transform-origin: 44px 42px; animation: fingerwave 2s ease-in-out infinite 0s; }
+      .sh-finger-middle { transform-origin: 51px 38px; animation: fingerwave 2s ease-in-out infinite 0.15s; }
+      .sh-finger-ring   { transform-origin: 58px 41px; animation: fingerwave 2s ease-in-out infinite 0.3s; }
+      .sh-finger-pinky  { transform-origin: 64px 46px; animation: fingerwave 2s ease-in-out infinite 0.45s; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100" height="100" rx="24" fill="#EEF2FF"/>
+
+  <!-- House roof -->
+  <path d="M50 14L17 42L24 48L50 24L76 48L83 42Z" fill="url(#sh-grad)" opacity="0.9"/>
+
+  <!-- House walls -->
+  <path d="M25 48V80C25 82.2 26.8 84 29 84H71C73.2 84 75 82.2 75 80V48" stroke="url(#sh-grad)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Animated natural hand -->
+  <g class="sh-hand-group">
+    <!-- Palm base -->
+    <path d="M38 72C38 68 40.7 65 44 65H57C60.3 65 63 68 63 72V76C63 79 60.3 81 57 81H44C40.7 81 38 79 38 76Z" fill="url(#sh-grad)"/>
+
+    <!-- Index finger -->
+    <g class="sh-finger-index">
+      <rect x="40" y="47" width="7" height="20" rx="3.5" fill="#2563EB"/>
+    </g>
+    <!-- Middle finger (tallest) -->
+    <g class="sh-finger-middle">
+      <rect x="47.5" y="43" width="7" height="24" rx="3.5" fill="#4F46E5"/>
+    </g>
+    <!-- Ring finger -->
+    <g class="sh-finger-ring">
+      <rect x="55" y="46" width="6.5" height="21" rx="3.25" fill="#7C3AED"/>
+    </g>
+    <!-- Pinky -->
+    <g class="sh-finger-pinky">
+      <rect x="61.5" y="52" width="5.5" height="15" rx="2.75" fill="#9333EA"/>
+    </g>
+
+    <!-- Thumb (extended outward) -->
+    <path d="M38 70L31 63C29.5 61.5 29.5 59 31 57.5L33 55.5C34.5 54 37 54 38.5 55.5L40 57" stroke="#6D28D9" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
